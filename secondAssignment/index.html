@@ -1,29 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-        <div class="container">
-            <header>
-             <nav>
-                <div class="wPusherLogo"></div>
-                <li>
-                    <ul>Download</ul>
-                    <ul>Learn more</ul>
-                    <ul>Pricing</ul>
-                    <ul>Help</ul>
-                    <ul class="active">Account</ul>
-                </li>                
-             </nav>   
-            </header>
-            <main>
-                
-            </main>
-            <footer></footer>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <div class="wPusherLogo"></div>
+          <li>
+            <ul>
+              Download
+            </ul>
+            <ul>
+              Learn more
+            </ul>
+            <ul>
+              Pricing
+            </ul>
+            <ul>
+              Help
+            </ul>
+            <ul class="active">
+              Account
+            </ul>
+          </li>
+        </nav>
+      </header>
+      <main>
+        <div class="mainBody">
+          <div class="checkoutSection">
+            <form action="">
+              <section class="firstSection">
+                <h2>Checkout</h2>
+              </section>
+              <section class="secondSection">
+                <div class="formInformation">
+                  <p class="number">1</p>
+                  <p class="Info">Your Basic Information</p>
+                </div>
+                <div class="formRow">
+                  <div class="formGroup">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" placeholder="Jane" />
+                  </div>
+                  <div class="formGroup">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" placeholder="Doe" />
+                  </div>
+                </div>
+                <div class="formGroup">
+                  <label for="emaiil">E-mail</label>
+                  <input
+                    type="text"
+                    id="email"
+                    class="email"
+                    placeholder="janedoe@example.com"
+                  />
+                </div>
+              </section>
+              <section class="thirdSection">
+                <div class="formInformation">
+                  <p class="number">2</p>
+                  <p class="Info">Your Payment Information</p>
+                </div>
+                <div class="formGroup">
+                  <label for="cardNumber">Credit Card</label>                 
+                  <div class="cardDetails">
+                    <input type="text" id="cardNumber"  placeholder="Card Number" required>
+                    <input type="text" id="expirationDate" name="expirationDate" placeholder="MM/YY" required>
+                    <input type="text" id="cvc" name="cvc" placeholder="CVC" required>
+                  </div>
+                </div>
+              </section>
+            </form>
+          </div>
+          <div class="freelancerSection"></div>
         </div>
-</body>
+      </main>
+      <footer></footer>
+    </div>
+  </body>
 </html>
