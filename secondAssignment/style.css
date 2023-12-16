@@ -124,7 +124,6 @@ main .mainBody {
 
 .formInformation .number {
   color: #548bc5;
-  /* text-align: center; */
   font-size: 16px;
   font-weight: 700;
   letter-spacing: -0.142px;
@@ -181,15 +180,23 @@ main .mainBody {
 
 #cardNumber{
   width: 70%;
+  border-radius: 4px 0 0 4px;
   
 }
 
 #expirationDate{
+  border-radius: 0;
   width: 18%;
 }
 
+
 #cvc{
+  border-radius: 0 4px 4px 0;
   width: 12%;
+}
+
+#cardNumber, #expirationDate, #cvc{
+  color: red;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -197,4 +204,46 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+span.question{
+  color: #548bc5;
+  font-size: 18px;
+  font-weight: 700;
+  border: 3px solid;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fourthSection{
+  margin-block-start: 39px;
+  display: flex;
+  align-items: center;
+  border: 1px solid red;
+  flex-direction: column;
+}
+button:focus{
+  outline: none;
+}
+
+ button.submit{
+  padding-block-start: 13px;
+  padding-block-end: 17px;
+  border: none;
+  width: 100%;
+  margin-inline: 48px;
+  background-color: #038E7D;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 4px;
+  letter-spacing: -0.396px;
 }
