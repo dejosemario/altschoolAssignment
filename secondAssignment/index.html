@@ -3,96 +3,139 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Registration Page</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <div class="container">
-      <header>
-        <nav>
-          <div class="wPusherLogo"></div>
-          <li>
-            <ul>
-              Download
-            </ul>
-            <ul>
-              Learn more
-            </ul>
-            <ul>
-              Pricing
-            </ul>
-            <ul>
-              Help
-            </ul>
-            <ul class="active">
-              Account
-            </ul>
-          </li>
-        </nav>
-      </header>
-      <main>
-        <div class="mainBody">
-          <div class="checkoutSection">
-            <form action="">
-              <section class="firstSection">
-                <h2>Checkout</h2>
-              </section>
-              <section class="secondSection">
-                <div class="formInformation">
-                  <p class="number">1</p>
-                  <p class="Info">Your Basic Information</p>
-                </div>
-                <div class="formRow">
-                  <div class="formGroup">
-                    <label for="firstName">First Name</label>
-                    <input type="text" id="firstName" placeholder="Jane" />
-                  </div>
-                  <div class="formGroup">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" id="lastName" placeholder="Doe" />
-                  </div>
-                </div>
-                <div class="formGroup">
-                  <label for="emaiil">E-mail</label>
-                  <input
-                    type="text"
-                    id="email"
-                    class="email"
-                    placeholder="janedoe@example.com"
-                  />
-                </div>
-              </section>
-              <section class="thirdSection">
-                <div class="formInformation">
-                  <p class="number">2</p>
-                  <p class="Info">Your Payment Information</p>
-                </div>
-                <div class="formGroup">
-                  <label for="cardNumber">Credit Card</label>                 
-                  <div class="cardDetails">
-                    <input type="text" id="cardNumber"  placeholder="Card Number" required>
-                    <input type="text" id="expirationDate" name="expirationDate" placeholder="MM/YY" required>
-                    <input type="text" id="cvc" name="cvc" placeholder="CVC" required>
-                  </div>
-                </div>
-              </section>
-              <section class="fourthSection">
-                  <button class="submit">
-                    Buy WP Pusher
-                  </button>
-               
-                <div>
-                  <img src="Mask.svg" alt="">
-                 <b>Need any help?</b> Don’t hesitate to contact support!
-                </div>
-                <img src="powered_by_stripe.svg" alt="">
-                  
-            </form>
-          </div>
-          <div class="freelancerSection"></div>
+      <div class="first-section">
+        <div class="forMobile">
+          <img src="./assets/Mobile-logo.svg" alt="logo" download />
         </div>
-      </main>
-      <footer></footer>
+        <div class="forDesktop">
+          <img src="./assets/Desktop-logo.svg" alt="logo" download />
+        </div>
+        <h2>For Individuals</h2>
+        <p class="sentence forMobile">
+          Inspiring wholesome harmony for the mind, body and spirit, for
+          everyone, everywhere.
+        </p>
+        <p class="sentence forDesktop">
+          Start benefiting from the wellness experience. For companies looking
+          on increasing productivity, and improving organization wellness.
+        </p>
+      </div>
+      <div class="second-section">
+        <form action="">
+          <div class="bio-data1">
+            <!-- First name -->
+            <div class="data1Info firstname">
+              <label for="first-name"> First Name </label>
+              <input
+                type="text"
+                name="first name"
+                id="first-name"
+                placeholder="Tolu"
+                required
+              />
+            </div>
+            <!-- Last name -->
+            <div class="data1Info lastname">
+              <label for="last name"> Last Name </label>
+              <input type="text" name="last name" id="last name" required />
+            </div>
+          </div>
+          <!-- Gender -->
+          <div class="bio-data2">
+            <div class="data2Info">
+              <label for="gender"> Gender </label>
+              <select
+                name="gender"
+                id="gender"
+                placeholder="select here"
+                required
+              >
+                <option value="" disabled selected>Select here</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <!-- Date of birth -->
+            <div class="data2Info">
+              <label for="DOB"> Date of birth</label>
+              <input
+                type="date"
+                name="DOB"
+                id="DOB"
+                placeholder="select here"
+                required
+              />
+            </div>
+          </div>
+          <!-- Weight -->
+          <div class="bio-data3">
+            <div class="data3Info">
+              <label for="weight"> Weight(KG)</label>
+              <input
+                type="text"
+                name="weight"
+                id="weight"
+                placeholder="Enter Weight"
+                required
+              />
+            </div>
+            <!-- Height -->
+            <div class="data3Info">
+              <label for="height"> Height (CM) </label>
+              <input
+                type="text"
+                name="height"
+                id="height"
+                placeholder="Enter height here"
+                required
+              />
+            </div>
+          </div>
+          <!-- Activity Level -->
+          <div class="data4Info">
+            <label for="activity-level"> Activity Level </label>
+            <div class="data4Info">
+              <select
+                name="activity level"
+                id="activity-level"
+                aria-placeholder="Select here"
+                required
+              >
+                <option value="">Select here</option>
+              </select>
+            </div>
+          </div>
+          <!-- Password -->
+          <div class="data5Info">
+            <label for="password"> Password </label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <div class="submit">
+            <button>Register</button>
+          </div>  
+          <footer class="forDesktop">
+            <p>
+              By clicking register, you agree to our
+              <a href="#">Terms of Use</a> and our
+              <a href="#"> Privacy Policy </a>
+            </p>
+          </footer>
+        </form>        
+      </div>
+      <footer class="forMobile">
+        <p>
+          By clicking register, you agree to our
+          <a href="#">Terms of Use</a> and our
+          <a href="#"> Privacy Policy </a>
+        </p>
+      </footer>
     </div>
   </body>
 </html>

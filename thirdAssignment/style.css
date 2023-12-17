@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  justify-content: center;
+  background: #f5f8fa;
+  overflow: hidden;
+  margin-block: 30px;
+  margin-inline: 40px;
+  font-style: normal;
+  line-height: normal;
+}
+
+.container {
+  width: 1440px;
+  border: 1px solid red;
+  min-width: 900px;
+  height: 1170px;
+}
+
+header {
+  padding-inline: 40px;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-block-start: 30px;
+  padding-block-end: 30px;
+  border-bottom: 1px solid#E0E6EA;
+}
+ul.active {
+  padding-inline: 20px;
+  padding-block: 11px;
+  border-radius: 6px;
+  border: 2px solid #646e7a;
+}
+header nav li {
+  display: flex;
+  flex-direction: row;
+  color: #1d2c3c;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.01px;
+  width: 476px;
+  height: 40px;
+}
+
+ul:hover,
+.wPusherLogo {
+  cursor: pointer;
+}
+
+.wPusherLogo {
+  background-image: url("wppusher-logo-copy.png"); /* Use relative path or URL */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 200px;
+  height: 39px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  margin-block-start: 80px;
+}
+
+main .mainBody {
+  display: flex;
+  width: 892px;
+  height: 795px;
+  border: 1px solid red;
+  flex-direction: row;
+}
+
+.mainBody .checkoutSection {
+  flex-grow: 1;
+}
+
+.freelancerSection {
+  width: 35%;
+  background-color: #1179BF;
+}
+
+.firstSection {
+  border-bottom: 1px solid#E0E6EA;
+  padding-inline: 48px;
+  padding-block-start: 41px;
+  padding-block-end: 24px;
+}
+
+.firstSection h2 {
+  color: #1d2c3c;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.secondSection, .thirdSection {
+  border-bottom: 1px solid #e0e6ea;
+  padding-inline: 48px;
+  padding-block-start: 36px;
+  padding-block-end: 41px;
+}
+
+.formInformation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-block-end: 9px;
+}
+
+.formInformation .number {
+  color: #548bc5;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.142px;
+  border: 2px solid;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formInformation .Info {
+  color: #1d2c3c;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.16px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
+  font-size: 14px;;
+}
+
+.formGroup label {
+  color: #1d2c3c;
+  font-weight: 400;
+}
+
+.formRow {
+  display: flex;
+  justify-content: space-between;
+  padding-block-end: 15px;
+}
+
+.formGroup input{
+  padding-inline-start: 13px;
+  padding-block: 9px;
+  background-color:#EDEFF2;
+  border: none; 
+  border-radius: 4px; 
+  font-size: 14px;
+}
+
+.formGroup .email{
+  width: 80%;
+}
+
+.cardDetails{
+  display: flex;
+}
+
+#cardNumber{
+  width: 70%;
+  border-radius: 4px 0 0 4px;
+  
+}
+
+#expirationDate{
+  border-radius: 0;
+  width: 18%;
+}
+
+
+#cvc{
+  border-radius: 0 4px 4px 0;
+  width: 12%;
+}
+
+#cardNumber, #expirationDate, #cvc{
+  color: red;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+span.question{
+  color: #548bc5;
+  font-size: 18px;
+  font-weight: 700;
+  border: 3px solid;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fourthSection{
+  margin-block-start: 39px;
+  display: flex;
+  align-items: center;
+  border: 1px solid red;
+  flex-direction: column;
+}
+button:focus{
+  outline: none;
+}
+
+ button.submit{
+  padding-block-start: 13px;
+  padding-block-end: 17px;
+  border: none;
+  width: 100%;
+  margin-inline: 48px;
+  background-color: #038E7D;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 4px;
+  letter-spacing: -0.396px;
+}
