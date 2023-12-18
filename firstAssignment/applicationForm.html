@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="application form">
+  <title>Application Form</title>
+</head>
+
+<body>
+<h2>
+  Application Form
+</h2>
+<form action="submit" method="GET">
+  <p>
+    <em>Please fill in your details</em>
+  </p>
+   
+   <fieldset>
+      <legend>
+        <b>Personal information</b>
+      </legend><br>
+      
+      <div>
+        <label for="first name">First name &ast;</label>
+        <input type="text" name="first name" id="first name" placeholder="please enter your first name" required/>
+      </div><br>
+        
+        <div>
+          <label for="last name">last name &ast;</label>
+          <input type="text" name="last name" id="last name" placeholder="please enter your last name" required />
+        </div><br>
+        
+        <div>
+        <label for="phone number">phone number &ast;</label>
+      <input type="tel" name="phone number" id="phone number" placeholder="please enter your phone number">
+        </div><br>
+      
+      <div>
+      <label for="email">email &ast;</label>
+      <input type="text>" name="email" id="email" placeholder="please enter your email"/>
+      </div><br>
+      
+      <div>
+        <label for="dob">date of birth &ast;</label>
+        <input type="date" name="date of birth" id="date of birth">
+      </div><br>
+      
+      <fieldset>
+        <legend>Religion</legend>
+        religion &ast; &nbsp;
+        <label for="Christian">Christian</label>
+        <input type="checkbox" name="religion" id="religion">
+        <label for="muslin">muslin &ast;</label>
+        <input type="checkbox" name="religion" id="religion"/>
+        </fieldset><br>
+        
+        <fieldset>
+          <legend>Gender</legend>
+            <label for="female">female </label>
+            <input type="checkbox" name="gender" id="gender">
+            <label for="male">male</label>
+            <input type="checkbox" name="gender" id="gender"/>
+        </fieldset>
+       <br>
+        
+        
+        <fieldset>
+          <legend>Educational background</legend>
+          <label for="graduate">graduate</label>
+          <input type="checkbox" name="educational background" id="educational background">
+          <label for="undergraduate">undergraduate</label>
+          <input type="checkbox" name="educational background" id="educational background">
+          <label for="postgraduate">postgraduate</label>
+          <input type="checkbox" name="educational background" id="educational background">
+        </fieldset><br>
+
+        <fieldset>
+          <legend>Area of residence</legend>
+          <label for="country">country &ast;</label>
+          <select name="country" id="country">
+            <option value="NG">Nigeria</option>
+            <option value="GH">Ghana</option>
+            <option value="Congo">Congo</option>
+            <option value="US">United States</option>
+            <option value="SA">South Africa </option>
+            <option value="Canada">Canada</option>
+          </select>
+         </fieldset><br>
+          
+          
+          <fieldset>
+            <legend>choose course of study</legend>
+            <label for="course of study">choose course</label>
+            <select name="course of study" id="course of study">
+              <option value="FE">Frontend engineering</option>
+             <option value="BE">Backend engineering</option>
+              <option value="CE">Cloud engineering</option>
+              <option value="PD">Product design</option>
+              <option value="DS">Data science</option>
+              <option value="DA">Data analysis</option>
+            </select>
+          </fieldset><br>
+         
+         
+         <div>
+           <label for="scholarship"><em>scholarship/discount (optional)</em></label>
+           <input type="text" placeholder="please enter your discount">
+         </div>
+         
+         <p>
+           by clicking, I agree to <a href="applicationForm.html"><strong>terms of us</strong></a> and acknowledge that I have gone through the <a href="#"><em>privacy and policy</em></a>
+         </p>
+         
+         <div>
+           <button type="submit"><em><strong>submit</strong></em></button>
+           </div><br>
+    </fieldset> <br>    
+    <footer>
+      <a href="index.html">back to main page</a>
+      
+      <p>
+        &lt; &lt;&lt; &copy; <a href="applicationForm.html">Odumodu Josemaria</a>
+      </p>
+    </footer>
+</body>
+
+</html>
