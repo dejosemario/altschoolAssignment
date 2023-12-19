@@ -95,6 +95,7 @@ main .mainBody {
   width: 35%;
   background-color: #1179bf;
   display: flex;
+  border-radius: 0px 6px 6px 0px;
   flex-direction: column;
   padding-inline-start: 46px;
   padding-inline-end: 32px;
