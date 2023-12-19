@@ -11,7 +11,7 @@ body {
   display: flex;
   justify-content: center;
   background: #f5f8fa;
-  overflow: hidden;
+  overflow-x: hidden;
   margin-block: 30px;
   margin-inline: 40px;
   font-style: normal;
@@ -20,9 +20,7 @@ body {
 
 .container {
   width: 1440px;
-  border: 1px solid red;
   min-width: 900px;
-  height: 1170px;
 }
 
 header {
@@ -80,9 +78,12 @@ main {
 main .mainBody {
   display: flex;
   width: 892px;
-  height: 795px;
-  border: 1px solid red;
+  max-height: 795px;
   flex-direction: row;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05),
+    0px 15px 35px 0px rgba(43, 64, 78, 0.1);
 }
 
 .mainBody .checkoutSection {
@@ -91,7 +92,7 @@ main .mainBody {
 
 .freelancerSection {
   width: 35%;
-  background-color: #1179BF;
+  background-color: #1179bf;
 }
 
 .firstSection {
@@ -108,18 +109,25 @@ main .mainBody {
   font-weight: 400;
 }
 
-.secondSection, .thirdSection {
+.secondSection,
+.thirdSection,
+.fourthSection {
   border-bottom: 1px solid #e0e6ea;
   padding-inline: 48px;
   padding-block-start: 36px;
   padding-block-end: 41px;
 }
 
+
 .formInformation {
   display: flex;
   align-items: center;
   gap: 10px;
   padding-block-end: 9px;
+}
+
+.thirdSection .formInformation{
+  padding-block-end: 21px;
 }
 
 .formInformation .number {
@@ -146,8 +154,9 @@ main .mainBody {
 .formGroup {
   display: flex;
   flex-direction: column;
-  row-gap: 7px;
-  font-size: 14px;;
+  font-size: 14px;
+  flex: 1; 
+  gap: 7px;
 }
 
 .formGroup label {
@@ -159,43 +168,45 @@ main .mainBody {
   display: flex;
   justify-content: space-between;
   padding-block-end: 15px;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-.formGroup input{
+.formGroup input {
   padding-inline-start: 13px;
   padding-block: 9px;
-  background-color:#EDEFF2;
-  border: none; 
-  border-radius: 4px; 
+  background-color: #edeff2;
+  border: none;
+  border-radius: 4px;
   font-size: 14px;
 }
 
-.formGroup .email{
-  width: 80%;
+.formGroup .email {
+  width: 76%;
 }
 
-.cardDetails{
+.cardDetails {
   display: flex;
 }
 
-#cardNumber{
+#cardNumber {
   width: 70%;
   border-radius: 4px 0 0 4px;
-  
 }
 
-#expirationDate{
+#expirationDate {
   border-radius: 0;
   width: 18%;
 }
 
-
-#cvc{
+#cvc {
   border-radius: 0 4px 4px 0;
   width: 12%;
 }
 
-#cardNumber, #expirationDate, #cvc{
+#cardNumber,
+#expirationDate,
+#cvc {
   color: red;
 }
 
@@ -210,7 +221,7 @@ input:focus {
   outline: none;
 }
 
-span.question{
+span.question {
   color: #548bc5;
   font-size: 18px;
   font-weight: 700;
@@ -223,27 +234,39 @@ span.question{
   justify-content: center;
 }
 
-.fourthSection{
-  margin-block-start: 39px;
+.fourthSection {
+  margin-block-start: 3px;
   display: flex;
   align-items: center;
-  border: 1px solid red;
   flex-direction: column;
+  border-bottom: none;
 }
-button:focus{
+
+button:focus {
   outline: none;
 }
 
- button.submit{
+button.submit {
   padding-block-start: 13px;
   padding-block-end: 17px;
+  margin-block-end: 24px;
+
   border: none;
   width: 100%;
-  margin-inline: 48px;
-  background-color: #038E7D;
+  background-color: #038e7d;
   color: white;
   font-size: 18px;
   font-weight: 700;
   border-radius: 4px;
   letter-spacing: -0.396px;
+}
+
+#imgText {
+  display: flex;
+  align-items: center;
+  margin-block-end: 28px;
+}
+
+#imgText img {
+  margin-inline-end: 10px;
 }
