@@ -61,7 +61,9 @@ h6 {
 
 body {
   background-color: #f7fdfc;
-  width: 100%;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
@@ -70,6 +72,7 @@ body {
   flex-direction: column;
   font-style: normal;
   line-height: normal;
+  max-width: 1300px;
   margin-inline: 24px;
   margin-block-start: 30px;
 }
@@ -209,7 +212,7 @@ footer p {
 
   .second-section {
     justify-content: center;
-    min-width: 520px;
+    max-width: 580px;
     padding-inline: 40px;
     padding-block-start: 40px;
   }
