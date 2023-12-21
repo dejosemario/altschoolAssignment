@@ -117,7 +117,7 @@
           <div class="data5Info">
             <label for="password"> Password </label>
             <input type="password" id="password" name="password" required />
-            <div class="passwordToggle">
+            <div class="passwordToggle" onclick="togglePassword()">
               <img
                 src="./assets/eyepasswordToggle.svg"
                 alt="eyepasswordToggle image"
@@ -144,5 +144,16 @@
         </p>
       </footer>
     </div>
+
+    <script>
+      function togglePassword() {
+        let showPassword = document.getElementById("password");
+        if (showPassword.type === "password") {
+          showPassword.type = "text";
+        } else {
+          showPassword.type = "password";
+        }
+      }
+    </script>
   </body>
 </html>
