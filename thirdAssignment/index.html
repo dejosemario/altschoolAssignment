@@ -10,24 +10,26 @@
     <div class="container">
       <header>
         <nav>
-          <div class="wPusherLogo"></div>
-          <li>
-            <ul>
-              Download
-            </ul>
-            <ul>
-              Learn more
-            </ul>
-            <ul>
-              Pricing
-            </ul>
-            <ul>
-              Help
-            </ul>
-            <ul class="active">
-              Account
-            </ul>
-          </li>
+          <div class="wPusherLogo">
+            <img src="./assets/wppusher-logo-copy.png" alt="Pusher Logo" />
+          </div>
+          <ul id="navList">
+            <li class="nav-item">
+              <a href="#">Download</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Learn more</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Help</a>
+            </li>
+            <li class="nav-item active">
+              <a href="#">Account</a>
+            </li>
+          </ul>
         </nav>
       </header>
       <main>
@@ -139,16 +141,40 @@
               the customer support is awesome!
             </p>
             <div class="profileImg">
-              <img src="./assets/Bitmap.png" width="50"  height="50" alt="profile-image" />
+              <img
+                src="./assets/Bitmap.png"
+                width="50"
+                height="50"
+                alt="profile-image"
+              />
               <p class="profileName">Kirk Beard</p>
             </div>
           </div>
         </div>
       </main>
       <footer>
-        <p>&copy; 2018 WP Pusher IVS·  <span>Terms of Service</span></p>
+        <p>&copy; 2018 WP Pusher IVS· <span>Terms of Service</span></p>
       </footer>
     </div>
+    <script>
+      function handleClick(event) {
+        var navItem = event.target.closest(".nav-item");
+
+        if (navItem) {
+          // Remove "active" class from all items
+          document.querySelectorAll(".nav-item").forEach(function (item) {
+            item.classList.remove("active");
+          });
+
+          // Add "active" class to the clicked item
+          navItem.classList.add("active");
+        } else {
+          console.log("Click event not triggered on a nav-item");
+        }
+      }
+
+      document.getElementById("navList").addEventListener("click", handleClick);
+    </script>
   </body>
   <article></article>
 </html>
