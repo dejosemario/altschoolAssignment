@@ -158,6 +158,18 @@ label {
   padding-block-end: 24px;
 }
 
+.data5Info{
+  position: relative;
+}
+
+.passwordToggle{
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
 .submit {
   display: flex;
   flex-direction: column;
