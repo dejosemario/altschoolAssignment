@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -43,7 +43,7 @@ header nav {
   border-radius: 6px;
   border: 2px solid #646e7a;
 }
-.nav-item a{
+.nav-item a {
   color: #1d2c3c;
   text-decoration: none;
 }
@@ -208,19 +208,28 @@ main .mainBody {
 }
 
 #expirationDate {
-  border-radius: 0;
+position: relative;
+z-index: -10;
+}
+
+.expiryDateInput {
+  background-color: #edeff2;
   width: 18%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.expiryDateInput > div[data-name="customDate"]{
+  position: absolute;
+  
+
 }
 
 #cvc {
   border-radius: 0 4px 4px 0;
   width: 12%;
-}
-
-#cardNumber,
-#expirationDate,
-#cvc {
-  color: red;
 }
 
 input[type="number"]::-webkit-inner-spin-button,

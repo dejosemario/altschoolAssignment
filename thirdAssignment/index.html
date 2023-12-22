@@ -73,22 +73,31 @@
                   <label for="cardNumber">Credit Card</label>
                   <div class="cardDetails">
                     <input
-                      type="text"
+                      type="tel"
+                      inputmode="numeric"
+                      pattern="[0-9\s]{13,19}"
+                      autocomplete="cc-number"
                       id="cardNumber"
                       placeholder="Card Number"
+                      maxlength="13"
                       required
                     />
+                    <div class="expiryDateInput">
+                      <div data-name="customDate">MM / YY</div>
+                      <input
+                        type="date"
+                        id="expirationDate"
+                        name="expirationDate"
+                        placeholder="MM/YY"
+                        required
+                      />
+                    </div>
                     <input
-                      type="text"
-                      id="expirationDate"
-                      name="expirationDate"
-                      placeholder="MM/YY"
-                      required
-                    />
-                    <input
-                      type="text"
+                      type="tel"
                       id="cvc"
                       name="cvc"
+                      pattern="[0-9\s]{1,3}"
+                      maxlength="3"
                       placeholder="CVC"
                       required
                     />
@@ -132,7 +141,7 @@
             </u>
             <div class="needAgency">
               <p class="needClients">Need 20 client sites</p>
-              <p class="agency">Switch to an <em>Agency</em>  plan.</p>
+              <p class="agency">Switch to an <em>Agency</em> plan.</p>
             </div>
             <hr />
             <p class="FTP">
@@ -157,6 +166,12 @@
       </footer>
     </div>
     <script>
+
+      document.getElementById("navList").addEventListener("click", handleClick);
+      const expiryDate = document.querySelector('[data-name="customDate"]');      
+      const expiryDateInput = expiryDate.nextElementSibling;
+
+
       function handleClick(event) {
         var navItem = event.target.closest(".nav-item");
 
@@ -173,7 +188,17 @@
         }
       }
 
-      document.getElementById("navList").addEventListener("click", handleClick);
+      expiryDate.onclick = () => {
+        expiryDateInput.showPicker();
+      };
+
+      expiryDateInput.onchange = (e) => {
+        const selectedDate = new Date(e.target.value);
+        const month = String(selectedDate.getMonth() + 1).padStart(2, "0");
+        const year = String(selectedDate.getFullYear()).slice(-2);
+        const dateYear = `${month} / ${year}`;
+        expiryDate.innerText = dateYear;
+      };
     </script>
   </body>
   <article></article>
